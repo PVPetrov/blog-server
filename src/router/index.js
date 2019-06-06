@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { login } from '../controllers/login';
+import login from '../controllers/login/login';
+import signup from '../controllers/login/signup';
 
 const router = Router();
 router.use('/ping', (req, res, next) => {
@@ -7,5 +8,6 @@ router.use('/ping', (req, res, next) => {
 });
 
 router.post('/login', login);
+router.post('/signup', signup);
 
 export default router;
