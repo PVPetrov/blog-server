@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose';
-import { isEmail, isEmpty } from 'validator';
+import { Schema, model } from "mongoose";
+import { isEmail, isEmpty } from "validator";
 
 const User = new Schema({
   firstname: {
@@ -25,7 +25,11 @@ const User = new Schema({
   password: {
     type: String,
     required: true
+  },
+  verified: {
+    type: Boolean,
+    default: false
   }
 });
 
-export default model('User', User);
+export default model("User", User);
